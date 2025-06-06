@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop Puzzle Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-content-wrapper">
+        <div class="screen" id="imageSelectionScreen">
+            <h2>Choose Your Puzzle Image:</h2>
+            <div class="image-options">
+                <div class="image-option" data-image-set="doraemon">
+                    <img src="doremon.jpg" alt="Doraemon Puzzle">
+                    <p>Doraemon</p>
+                </div>
+                <div class="image-option" data-image-set="shinchan">
+                    <img src="shinchan.jpg" alt="Shinchan Puzzle">
+                    <p>Shinchan</p>
+                </div>
+                <div class="image-option" data-image-set="oggy">
+                    <img src="oggy.jpg" alt="Oggy Puzzle">
+                    <p>Oggy</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen" id="difficultySelectionScreen" style="display: none;">
+            <h2>Choose Difficulty Level:</h2>
+            <div class="difficulty-options">
+                <button class="difficulty-btn" data-difficulty="easy" data-grid-size="3">Easy (3x3)</button>
+                <button class="difficulty-btn" data-difficulty="medium" data-grid-size="4">Medium (4x4)</button>
+                <button class="difficulty-btn" data-difficulty="hard" data-grid-size="5">Hard (5x5)</button>
+            </div>
+        </div>
+
+        <div class="game-area" id="gameArea" style="display: none;">
+            <div class="game-container">
+                <div class="drag" id="drag">
+                    </div>
+
+                <div class="board" id="board">
+                    </div>
+
+                <div class="full-image-display" id="fullImageDisplay">
+                    <img src="" alt="Solved Puzzle Image" id="solvedFullImage">
+                </div>
+            </div>
+
+            <div class="message-container" id="messageContainer">
+                <p class="congratulations-msg" id="congratulationsMsg"></p>
+            </div>
+
+            <div class="buttons">
+                <button class="start-btn" id="startButton">Start Game</button>
+                <button class="reset-btn" id="resetButton">Reset Puzzle</button>
+                <button class="back-to-menu-btn" id="backToMenuButton">Back to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
